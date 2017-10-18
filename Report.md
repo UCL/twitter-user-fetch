@@ -24,6 +24,10 @@ The `GET` method `statuses/user_timeline`
 
 https://api.twitter.com/1.1/statuses/user_timeline.json
 
+### References 
+
+https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline
+
 ## Stemming
 
 > After fetching the tweets of the user, the program should be able to rank the most frequent word 
@@ -44,11 +48,12 @@ There are a number of stemming algorithms implemented in Python:
 
 Porter/Porter2 is the most popular. Libraries such as NLTK and Stemming offer implementations.
 
+### References
+
+https://pypi.python.org/pypi/stemming/1.0
+https://pythonprogramming.net/stemming-nltk-tutorial/
+
+
 ## Frequency
 
 Pandas is used instead of R to calculate average monthly frequencies for the final report
-
-
-[user_timeline_ref]: https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline
-[stemming-ref]: https://pypi.python.org/pypi/stemming/1.0
-[stemming-nltk-ref]: https://pythonprogramming.net/stemming-nltk-tutorial/
