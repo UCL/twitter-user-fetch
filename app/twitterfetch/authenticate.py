@@ -11,8 +11,8 @@ class Authenticate(object):
 
     twitter_api_auth_url = "https://api.twitter.com/oauth2/token"
 
-    def get_access_token(self, data, headers):
-        req = urllib.request.Request(self.twitter_api_auth_url, data, headers)
+    def get_access_token(self):
+        req = urllib.request.Request(self.twitter_api_auth_url, self.get_request_body(), self.get_headers())
         resp = urllib.request.urlopen(req).read()
         return json.loads(resp.decode('utf-8'))['access_token']
 
