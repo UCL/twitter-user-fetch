@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import sys
-from config import twitter
+sys.path.append('config')
 
 
 def main():
