@@ -8,5 +8,6 @@ class TestCredentials(unittest.TestCase):
         auth = authenticate.Authenticate()
         headers = authenticate.Authenticate.get_headers(auth)
         data = authenticate.Authenticate.get_request_body(auth)
-        result = authenticate.Authenticate.get_access_json(auth, data, headers)
+        result = authenticate.Authenticate.get_access_token(auth, data, headers)
         print(result)
+        self.assertRegex(result, "^[A-Za-z0-9%]+")
