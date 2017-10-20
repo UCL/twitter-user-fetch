@@ -7,5 +7,4 @@ class TestCredentials(unittest.TestCase):
     def test_get_access_json(self):
         auth = authenticate.Authenticate()
         result = authenticate.Authenticate.get_access_token(auth)
-        print(result)
         self.assertRegex(result, "^[A-Za-z0-9%]+")
