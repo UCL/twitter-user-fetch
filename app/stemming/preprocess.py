@@ -12,7 +12,8 @@ class PreProcess(object):
     """
 
     stop_words = set(stopwords.words('english'))
-    stop_words.update(['.', ',', '"', "'", '?', '!', ':', ';', '(', ')', '[', ']', '{', '}'])
+    stop_words.update(['.', ',', '"', "'", '?', '!', ':', ';', '(', ')', '[', ']', '{', '}', '’', '-', '‘', '…', '%',
+                       '£', '&', '”', '...'])
     tweet_tokenizer = TweetTokenizer(preserve_case=False, strip_handles=True)
 
     def remove_stopwords_and_punctuation(self, tweet_text):
