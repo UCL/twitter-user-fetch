@@ -14,4 +14,4 @@ class TestTwitterUserFetch(unittest.TestCase):
                   'https://t.co/P8pi4dZtHN via @DZone #java #web'
         expected = ['java', 'dead', 'web', 'compani', 'grow', 'turn', 'java', 'shop', 'video',
                     'https://t.co/p8pi4dzthn', 'via', '#java', '#web']
-        self.assertListEqual(twitterUserFetch.get_word_stems(tw_text), expected)
+        self.assertListEqual(twitterUserFetch.get_word_stems(tw_text, 'porter'), expected)
