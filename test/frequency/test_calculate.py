@@ -31,3 +31,11 @@ class TestCalculate(unittest.TestCase):
         ]
         calc_df = calculate.Calculate(self.dl)
         self.assertListEqual(calc_df.get_average_monthly_frequency().values.tolist(), expected, "Must calculate avg")
+
+    def test_get_average_monthly_frequency_descending(self):
+        expected = [
+            ['#alltestsmatter2', 2.0],
+            ['#alltestsmatter1', 1.5]
+        ]
+        calc_df = calculate.Calculate(self.dl)
+        self.assertListEqual(calc_df.get_average_monthly_frequency_descending().values.tolist(), expected, "Must sort")

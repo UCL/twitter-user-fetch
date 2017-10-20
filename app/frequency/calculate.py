@@ -33,3 +33,9 @@ class Calculate(object):
         Obtains the average monthly frequency for each word stem
         """
         return self.get_monthly_frequency().groupby(['stem'], as_index=False)[['stem_freq']].mean()
+
+    def get_average_monthly_frequency_descending(self):
+        """
+        Sorts the average monthly frequency of stems in descending order
+        """
+        return self.get_average_monthly_frequency().sort_values(by='stem_freq', ascending=False)
